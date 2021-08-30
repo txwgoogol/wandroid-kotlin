@@ -5,6 +5,34 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+
+
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- 分割线颜色 -->
+    <color name="colorLine">#FFEEEEEE</color>
+
+    <!-- 全透明 -->
+    <color name="colorTransparent">#00000000</color>
+    <!-- 半透明 -->
+    <color name="colorTranslucent">#50000000</color>
+    <!-- 白色半透明 -->
+    <color name="colorTranslucentWhite">#80FFFFFF</color>
+
+    <!-- 应用背景色 -->
+    <color name="windowBackground">#FFFAF7FA</color>
+
+    <!-- 应用颜色配置 -->
+    <color name="colorMain">#FF6A00</color>
+    <color name="colorSub1">#5D8AFF</color>
+    <color name="colorSub2">#50C27F</color>
+    <color name="colorSub3">#F34A16</color>
+
+    <!-- 文字颜色 -->
+    <color name="colorFont">#333333</color>
+    <color name="colorFont1">#666666</color>
+    <color name="colorFont2">#999999</color>
+
+
 </resources>
