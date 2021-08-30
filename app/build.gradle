@@ -1,0 +1,97 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "io.github.txwgoogol.apps.jetpack"
+        minSdk 22
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    //coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1'
+    //lifecycle
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0-alpha03'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0-alpha03'
+    //startup
+    implementation 'androidx.startup:startup-runtime:1.1.0-rc01'
+    //paging3
+    implementation 'androidx.paging:paging-runtime:3.0.1'
+    //viewpager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    //room
+    implementation 'androidx.room:room-runtime:2.3.0'
+    kapt 'androidx.room:room-compiler:2.3.0'
+    //navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    //logger
+    implementation 'com.orhanobut:logger:2.2.0'
+    //util codex
+    implementation 'com.blankj:utilcodex:1.30.6'
+    //circle imageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //banner
+    implementation 'io.github.zguop:pager2Banner:1.0.5'
+    //permissions
+    implementation 'com.github.permissions-dispatcher:ktx:1.1.2'
+    //shape
+    implementation 'com.github.ansen666:ShapeView:1.3.5'
+    //
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    //tab layout
+    implementation 'com.github.angcyo.DslTablayout:TabLayout:3.0.0'
+    implementation 'com.github.angcyo.DslTablayout:ViewPager2Delegate:3.0.0'
+    //wechat
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.9'
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    //coil
+    implementation 'io.coil-kt:coil:1.3.2'
+    //brv
+    implementation 'com.github.liangjingkanji:BRV:1.3.31'
+    //bar
+    implementation 'com.github.liangjingkanji:StatusBar:1.1.1'
+    //test
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
