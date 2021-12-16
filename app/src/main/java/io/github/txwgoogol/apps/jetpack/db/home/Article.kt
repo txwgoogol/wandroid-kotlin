@@ -1,5 +1,6 @@
 package io.github.txwgoogol.apps.jetpack.db.home
 
+//文章
 data class Article(
     val apkLink: String,
     val audit: Int,

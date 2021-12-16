@@ -70,7 +70,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">12pt</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/colorFont2</item>
+        <item name="android:textColor">@color/colorFont1</item>
     </style>
 
     <style name="font_13">
@@ -86,7 +86,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">14pt</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/colorFont1</item>
+        <item name="android:textColor">@color/colorFont</item>
     </style>
 
     <style name="font_15">

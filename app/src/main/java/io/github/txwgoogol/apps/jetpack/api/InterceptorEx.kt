@@ -1,6 +1,5 @@
 package io.github.txwgoogol.apps.jetpack.api
 
-import com.blankj.utilcode.util.SPStaticUtils
 import com.orhanobut.logger.Logger
 import okhttp3.Interceptor
 import okhttp3.Response
@@ -12,7 +11,7 @@ class InterceptorEx : Interceptor {
         val original = chain.request()
         //添加公共请求头
         val request = chain.request().newBuilder()
-            .header("CPC-TOKEN", SPStaticUtils.getString("uid"))
+            //.header("", "")
             .method(original.method, original.body)
             .build()
 

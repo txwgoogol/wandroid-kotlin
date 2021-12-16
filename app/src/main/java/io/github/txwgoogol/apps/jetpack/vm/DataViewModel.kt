@@ -7,11 +7,11 @@ import io.github.txwgoogol.apps.jetpack.db.Base
 
 class DataViewModel(val id: String) : BaseViewModel() {
 
-    val result = liveData<Result<Base>> {
-        val response = ApiStores.create().get(id)
-        if (response.isSuccess) {
-            //emit(response.data.toString())
-        }
-    }
+//    val result = liveData<Result<Base>> {
+//        val response = ApiStores.create().get(id)
+//        if (response.isSuccess) {
+//            emit(response.data.toString())
+//        }
+//    }
 
 }

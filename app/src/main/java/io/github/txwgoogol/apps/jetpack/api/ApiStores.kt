@@ -6,12 +6,14 @@ import io.github.txwgoogol.apps.jetpack.db.home.Article
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
 import java.util.concurrent.TimeUnit
 
 //接口
 interface ApiStores {
+
 
     /**
      * 首页文章
@@ -20,13 +22,14 @@ interface ApiStores {
      * 参数：页码，拼接在连接中，从0开始。
      */
     @GET("article/list/{index}/json")
-    suspend fun homeArticle(@Path("index") id: String): Result<Base<Page<Article>>>
+    suspend fun article(@Path("index") id: String): Result<Base<Page<Article>>>
+
 
     companion object {
         private const val BASE_URL = "https://www.wanandroid.com/"
+
         fun create(): ApiStores {
-            val client = OkHttpClient
-                .Builder()
+            val client = OkHttpClient.Builder()
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(10, TimeUnit.SECONDS)
                 .writeTimeout(10, TimeUnit.SECONDS)
@@ -34,8 +37,10 @@ interface ApiStores {
                 .build()
             return Retrofit.Builder().baseUrl(BASE_URL).client(client)
                 .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(MoshiConverterFactory.create())
                 .build().create(ApiStores::class.java)
         }
     }
+
 
 }
