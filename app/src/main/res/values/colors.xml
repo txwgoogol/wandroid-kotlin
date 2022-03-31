@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="colorPrimary">@color/colorMain</color>
+    <color name="colorPrimaryDark">@android:color/white</color>
+    <color name="colorAccent">@color/colorMain</color>
+
+    <!-- 应用背景色 -->
+    <color name="windowBackground">#F8F8F8</color>
+
+    <!-- 分割线颜色 -->
+    <color name="colorLine">#FFEEEEEE</color>
+
+
+    <!-- 应用颜色配置 -->
+    <color name="colorMain">#23DD7E</color>
+<!--    <color name="colorSub1">#5D8AFF</color>-->
+<!--    <color name="colorSub2">#50C27F</color>-->
+<!--    <color name="colorSub3">#F34A16</color>-->
+
+
+    <!-- 文字颜色 -->
+    <color name="colorFont">#333333</color>
+    <color name="colorFont1">#666666</color>
+    <color name="colorFont2">#999999</color>
+
+
+    <!-- 全透明 -->
+    <color name="colorTransparent">#00000000</color>
+    <!-- 半透明 -->
+    <color name="colorTranslucent">#50000000</color>
+    <!-- 白色半透明 -->
+    <color name="colorTranslucentWhite">#80FFFFFF</color>
+
+
+    <color name="textColorPrimary">#1B1B1D</color>
+    <color name="textColorSecondary">#6B7178</color>
+    <color name="textColorThird">#9297A2</color>
+
+    <color name="bgColorPrimary">#FFFFFF</color>
+    <color name="bgColorSecondary">#F8F8F8</color>
+    <color name="bgColorThird">#E8E8E8</color>
+
+    <color name="colorRipple">#E2E2E2</color>
+    <color name="colorBadge">#FC1603</color>
+
+
+</resources>

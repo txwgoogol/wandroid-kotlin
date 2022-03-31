@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/match"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/font_12"
+        android:layout_gravity="center"
+        android:text="网络似乎出了点问题..." />
+
+    <com.ansen.shape.AnsenButton
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10pt"
+        android:text="重新加载"
+        android:textSize="12sp"
+        app:corners_radius="20dp"
+        app:solid_color="@android:color/white" />
+
+</LinearLayout>

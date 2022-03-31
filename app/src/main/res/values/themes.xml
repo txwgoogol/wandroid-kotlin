@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.App" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorMain</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/colorMain</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+<!--        <item name="android:fitsSystemWindows">true</item>-->
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+
+        <!--状态栏颜色，应用的主要暗色调，statusBarColor默认使用该颜色-->
+<!--        <item name="android:colorPrimaryDark">@android:color/white</item>-->
+        <!--一般控件的选种效果默认采用该颜色-->
+<!--        <item name="android:colorAccent">@color/colorAccent</item>-->
+
+        <!--状态栏颜色，默认使用colorPrimaryDark-->
+<!--        <item name="android:statusBarColor">@android:color/white</item>-->
+
+        <!--页面背景色-->
+        <item name="android:windowBackground">@color/windowBackground</item>
+
+        <!--底部导航栏颜色-->
+        <item name="android:navigationBarColor">@android:color/black</item>
+
+        <!--应用的主要文字颜色，actionBar的标题文字默认使用该颜色-->
+<!--        <item name="android:textColorPrimary">@android:color/black</item>-->
+
+        <!--ToolBar上的Title颜色-->
+<!--        <item name="android:textColorPrimaryInverse">@android:color/white</item>-->
+
+        <!--应用的前景色，ListView的分割线，switch滑动区默认使用该颜色-->
+<!--        <item name="android:colorForeground">@color/colorForeground</item>-->
+        <!--应用的背景色，popMenu的背景默认使用该颜色-->
+<!--        <item name="android:colorBackground">@color/colorForeground</item>-->
+
+        <!--各个控制控件的默认颜色-->
+<!--        <item name="android:colorControlNormal">@color/colorControlNormal</item>-->
+
+        <!--控件选中时的颜色，默认使用colorAccent-->
+<!--        <item name="android:colorControlActivated">@color/colorControlActivated</item>-->
+
+        <!--控件按压时的色调-->
+<!--        <item name="android:colorControlHighlight">@color/colorControlHighlight</item>-->
+
+        <!--Button，textView的文字颜色-->
+<!--        <item name="android:textColor">@color/text_dark</item>-->
+
+        <!--RadioButton checkbox等控件的文字-->
+<!--        <item name="android:textColorPrimaryDisableOnly">@color/text_dark</item>-->
+
+        <!--默认按钮的背景颜色-->
+<!--        <item name="android:colorButtonNormal">@color/text_dark</item>-->
+
+        <!--对话框的背景是否变暗-->
+<!--        <item name="android:backgroundDimEnabled">true</item>-->
+
+        <!--Activity 的切换动画。其引用的 activityAnim 也是 style ，需要继承 parent="@android:style/Animation.Translucent"-->
+<!--        <item name="android:windowAnimationStyle">@style/activityAnim</item>-->
+
+        <!--title 标题栏字体设置-->
+<!--        <item name="android:titleTextAppearance">@style/MaterialAnimations.TextAppearance.Title</item>-->
+
+        <!--允许使用transitions(过渡动画)-->
+<!--        <item name="android:windowContentTransitions">true</item>-->
+        <!--是否覆盖执行，其实可以理解成前后两个页面是同步执行还是顺序执行-->
+<!--        <item name="android:windowAllowEnterTransitionOverlap">false</item>-->
+        <!--与上面相同。即上一个设置了退出动画，这个设置了进入动画，两者是否同时执行。-->
+<!--        <item name="android:windowAllowReturnTransitionOverlap">false</item>-->
+
+        <item name="android:windowLightStatusBar" tools:targetApi="n">true</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+
+    </style>
+
+    <!--SplashScreen兼容库，静态背景，android5.0 ~ android11-->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!--这里主要是针对6.0以下设备，让导航栏能看清楚-->
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <!--给父主题设置窗口背景-->
+        <item name="android:windowBackground">@drawable/ic_kuaishou_splash_screen_window_bg</item>
+        <!--使用透明的drawable替换中心图标，如果不替换在部分旧系统会展示一个机器人-->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_transparent_svg</item>
+        <!--需要配置，不配置的话，启动页消失到主页显示的时候，有个过渡动画，会闪这个颜色的背景色-->
+        <item name="windowSplashScreenBackground">@android:color/white</item>
+        <item name="windowSplashScreenAnimationDuration">200</item>
+        <item name="postSplashScreenTheme">@style/Theme.App</item>
+    </style>
+
+</resources>

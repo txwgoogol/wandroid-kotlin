@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">WAndroid</string>
+
+
+    <string name="home">Home</string>
+    <string name="search_hint">Search keywords are separated by spaces</string>
+    <string name="popular">Popular</string>
+    <string name="latest">Latest</string>
+    <string name="plaza">Plaza</string>
+    <string name="project">Project</string>
+    <string name="wechat">Wechat</string>
+
+
+    <string name="system">System</string>
+
+
+    <string name="discovery">Discovery</string>
+    <string name="top">Top</string>
+    <string name="fresh">New</string>
+    <string name="separate">/</string>
+    <string name="everyone_search">Everyone search</string>
+    <string name="frequently_website">Frequently website</string>
+
+
+    <string name="navigation">Navigation</string>
+
+
+    <!-- 个人中心 -->
+    <string name="mine">Mine</string>
+    <string name="login_register">Login/Register</string>
+    <string name="my_points">My points</string>
+    <string name="my_points_rank">Points rank</string>
+    <string name="my_collect">My collect</string>
+    <string name="my_share">My share</string>
+    <string name="my_view_history">View history</string>
+    <string name="my_system_setting">System setting</string>
+    <string name="my_about_author">About author</string>
+    <string name="my_open_source">Open source</string>
+
+
+    <string name="loading">loading&#8230;</string>
+    <string name="no_data">no data</string>
+
+    <string name="press_again_to_exit">Press again to exit</string>
+
+    <string name="content_description">Content Description</string>
+    <string name="network_request_failed">Network request failed</string>
+    <string name="api_data_parse_error">Api data parse error</string>
+
+
+</resources>

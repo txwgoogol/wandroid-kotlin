@@ -1,0 +1,20 @@
+buildscript {
+    repositories {
+        maven { url 'https://jitpack.io' }
+        // 改为阿里云的镜像地址
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:1.6.10"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

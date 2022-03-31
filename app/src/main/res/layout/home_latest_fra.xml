@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    style="@style/match"
+    tools:context=".ui.main.home.popular.PopularFragment">
+
+    <FrameLayout style="@style/match">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            style="@style/match"
+            android:background="@color/bgColorSecondary"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <FrameLayout
+            android:id="@+id/reloadView"
+            style="@style/match"
+            android:visibility="gone">
+
+            <include
+                style="@style/match"
+                layout="@layout/include_reload" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

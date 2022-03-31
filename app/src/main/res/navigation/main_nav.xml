@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="io.github.txwgoogol.apps.wandroid.ui.main.home.HomeFragment"
+        tools:layout="@layout/home_fra">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/system"
+        android:name="io.github.txwgoogol.apps.wandroid.ui.main.system.SystemFragment"
+        tools:layout="@layout/system_fra">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/discovery"
+        android:name="io.github.txwgoogol.apps.wandroid.ui.main.discovery.DiscoveryFragment"
+        tools:layout="@layout/discovery_fra">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation"
+        android:name="io.github.txwgoogol.apps.wandroid.ui.main.navigation.NavigationFragment"
+        tools:layout="@layout/navigation_fra">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="io.github.txwgoogol.apps.wandroid.ui.main.profile.ProfileFragment"
+        tools:layout="@layout/home_profile_fra">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/article_detail"
+        android:name="io.github.txwgoogol.apps.wandroid.ui.detail.DetailFragment"
+        tools:layout="@layout/detail_fra" />
+
+</navigation>

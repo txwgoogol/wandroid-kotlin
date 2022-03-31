@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.App" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorMain</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorMain</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:fitsSystemWindows">true</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="n">false</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
+
+    </style>
+
+    <!--SplashScreen兼容库，静态背景，android5.0 ~ android11-->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!--给父主题设置窗口背景-->
+        <item name="android:windowBackground">@android:color/black</item>
+        <!--使用透明的drawable替换中心图标，如果不替换在部分旧系统会展示一个机器人-->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_transparent_svg</item>
+        <!--需要配置，不配置的话，启动页消失到主页显示的时候，有个过渡动画，会闪这个颜色的背景色-->
+        <item name="windowSplashScreenBackground">@android:color/black</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <item name="postSplashScreenTheme">@style/Theme.App</item>
+    </style>
+
+</resources>

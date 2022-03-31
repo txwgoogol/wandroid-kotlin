@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match"
+    android:orientation="vertical"
+    tools:context="io.github.txwgoogol.apps.wandroid.ui.main.navigation.NavigationFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/bgColorPrimary"
+        android:elevation="1dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/navigation"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/windowBackground" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        style="@style/match">
+
+        <FrameLayout style="@style/match">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                style="@style/match"
+                android:background="@color/bgColorSecondary"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/nav_item" />
+
+            <TextView
+                android:id="@+id/tvFloatTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgColorPrimary"
+                android:fontFamily="sans-serif-medium"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="16dp"
+                android:textColor="@color/textColorSecondary"
+                tools:text="常用网站" />
+
+            <include
+                android:id="@+id/reloadView"
+                style="@style/match"
+                layout="@layout/include_reload"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

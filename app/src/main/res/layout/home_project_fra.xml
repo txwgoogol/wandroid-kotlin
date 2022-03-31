@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match"
+    tools:context=".ui.main.home.project.ProjectFragment">
+
+    <LinearLayout
+        style="@style/match"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            style="@style/match">
+
+            <FrameLayout style="@style/match">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    style="@style/match"
+                    android:background="@color/bgColorSecondary"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <FrameLayout
+                    android:id="@+id/reloadListView"
+                    style="@style/match"
+                    android:visibility="gone">
+
+                    <include
+                        style="@style/match"
+                        layout="@layout/include_reload" />
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/reloadView"
+        style="@style/match"
+        android:visibility="gone">
+
+        <include
+            style="@style/match"
+            layout="@layout/include_reload" />
+    </FrameLayout>
+
+</FrameLayout>

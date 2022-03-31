@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/ic_info_gray" />
+
+    <TextView
+        style="@style/font_12"
+        android:layout_marginTop="16dp"
+        android:text="没有相关数据" />
+
+</LinearLayout>

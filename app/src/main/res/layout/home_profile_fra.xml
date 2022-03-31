@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/bgColorPrimary"
+        app:elevation="1dp">
+
+        <TextView
+            style="@style/font_16"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/mine"
+            android:textColor="@color/textColorPrimary" />
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        style="@style/match">
+
+        <androidx.core.widget.NestedScrollView
+            style="@style/match"
+            android:background="@color/bgColorSecondary"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/civAratar"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:contentDescription="@string/content_description"
+                        android:src="@drawable/ic_avatar_black_96dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/textColorThird" />
+
+                    <TextView
+                        android:id="@+id/tvLoginRegister"
+                        style="@style/font_16"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/login_register"
+                        android:textColor="@color/textColorPrimary"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@+id/civAratar"
+                        app:layout_constraintStart_toEndOf="@+id/civAratar"
+                        app:layout_constraintTop_toTopOf="@+id/civAratar" />
+
+                    <TextView
+                        android:id="@+id/tvNickName"
+                        style="@style/font_14"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/textColorPrimary"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/civAratar"
+                        app:layout_constraintTop_toTopOf="@+id/civAratar"
+                        tools:text="小小的大太阳" />
+
+                    <TextView
+                        android:id="@+id/tvId"
+                        style="@style/font_12"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="@color/textColorSecondary"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/civAratar"
+                        app:layout_constraintStart_toEndOf="@id/civAratar"
+                        tools:text="88888888" />
+
+                    <ImageView
+                        style="@style/wrap"
+                        android:contentDescription="@string/content_description"
+                        android:src="@drawable/ic_chevron_right_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/textColorThird" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llMyPoints"
+                        style="@style/wrap"
+                        android:background="@drawable/ripple_item_select"
+                        android:paddingStart="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="14dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@string/content_description"
+                            android:src="@drawable/ic_my_integral"
+                            app:tint="@color/textColorPrimary" />
+
+                        <TextView
+                            style="@style/font_14"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/my_points"
+                            android:textColor="@color/textColorPrimary" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bgColorSecondary" />
+
+                    <LinearLayout
+                        android:id="@+id/llPointsRank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ripple_item_select"
+                        android:paddingStart="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="14dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@string/content_description"
+                            android:src="@drawable/ic_graphic_eq_black"
+                            app:tint="@color/textColorPrimary" />
+
+                        <TextView
+                            style="@style/font_14"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/my_points_rank"
+                            android:textColor="@color/textColorPrimary" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llMyShare"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ripple_item_select"
+                        android:paddingStart="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="14dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@string/content_description"
+                            android:src="@drawable/ic_add_circle_outline_black_24dp"
+                            app:tint="@color/textColorPrimary" />
+
+                        <TextView
+                            style="@style/font_14"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/my_share"
+                            android:textColor="@color/textColorPrimary" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bgColorSecondary" />
+
+                    <LinearLayout
+                        android:id="@+id/llMyCollect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ripple_item_select"
+                        android:paddingStart="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="14dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@string/content_description"
+                            android:src="@drawable/ic_star_border_black"
+                            app:tint="@color/textColorPrimary" />
+
+                        <TextView
+                            style="@style/font_14"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/my_collect"
+                            android:textColor="@color/textColorPrimary" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bgColorSecondary" />
+
+                    <LinearLayout
+                        android:id="@+id/llHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ripple_item_select"
+                        android:paddingStart="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="14dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@string/content_description"
+                            android:src="@drawable/ic_history_black"
+                            app:tint="@color/textColorPrimary" />
+
+                        <TextView
+                            style="@style/font_14"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/my_view_history"
+                            android:textColor="@color/textColorPrimary" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llOpenSource"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ripple_item_select"
+                        android:paddingStart="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="14dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@string/content_description"
+                            android:src="@drawable/ic_github"
+                            app:tint="@color/textColorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/my_open_source"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bgColorSecondary" />
+
+                    <LinearLayout
+                        android:id="@+id/llAboutAuthor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ripple_item_select"
+                        android:paddingStart="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="14dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@string/content_description"
+                            android:src="@drawable/ic_info_outline_black"
+                            app:tint="@color/textColorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/my_about_author"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bgColorSecondary" />
+
+                    <LinearLayout
+                        android:id="@+id/llSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ripple_item_select"
+                        android:paddingStart="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="14dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@string/content_description"
+                            android:src="@drawable/ic_settings_black_24"
+                            app:tint="@color/textColorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/my_system_setting"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
