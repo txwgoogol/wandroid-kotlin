@@ -8,7 +8,7 @@ plugins {
 android {
     compileSdk 31
     defaultConfig {
-        applicationId "io.github.txwgoogol.apps.wandroid.ktx"
+        applicationId "io.github.txwgoogol.apps.wandroid.kotlin"
         minSdk 23
         targetSdk 31
         versionCode 1

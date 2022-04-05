@@ -10,5 +10,5 @@ dependencyResolutionManagement {
         //maven { url "https://oss.sonatype.org/content/repositories/snapshots/" } //okdownload
     }
 }
-rootProject.name = "wandroid-ktx"
+rootProject.name = "wandroid-kotlin"
 include ':app'
